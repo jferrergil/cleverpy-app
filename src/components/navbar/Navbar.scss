@@ -1,0 +1,15 @@
+$light: #ffffff;
+$gray: #c4ccde;
+
+.navbar {
+  background-color: #f1d07c;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ffe451;
+  
+  a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
