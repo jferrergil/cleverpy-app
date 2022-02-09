@@ -40,7 +40,7 @@
 }
 
 .card-user {
-  color: black;
+  color: white;
   font-size: 20px;
   padding: 30px 0;
   text-align: center;
@@ -61,7 +61,7 @@
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  background: #000;
+  background: #545454;
   color: #fff;
   border-radius: 40px;
   margin-top: 20px;
@@ -69,9 +69,9 @@
 }
 
 .container .card:nth-child(odd) .circle {
-  background: #ffaf00;
+  background: #902384;
 }
 
 .container .card:nth-child(even) .circle {
-  background: #bb02ff;
+  background: #e51978;
 }
