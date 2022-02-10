@@ -60,7 +60,7 @@
     "coveragePathIgnorePatterns": [
       "src/index.tsx",
       "src/reportWebVitals.ts",
-      "scr/shared/reducer/root-reducer.tsx"
+      "src/shared/state/store/store.tsx"
     ]
   }
 }

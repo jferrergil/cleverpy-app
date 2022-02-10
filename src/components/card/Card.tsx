@@ -3,6 +3,7 @@ import { ICard } from "../../shared/models/card.model";
 export const Card = ({post, func}: ICard) => {
   return <div className='card'>
   <div className='circle'>
+    
     <h2 className='card-user'>
       {post.title}
     </h2>

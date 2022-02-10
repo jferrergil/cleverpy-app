@@ -9,7 +9,7 @@ import "./Home.scss";
 export default function Home() {
   let dispatch = useDispatch();
   const { posts } = useSelector((state: any) => state.data);
-  
+
   const [initialId, setInitialId] = useState(0);
 
   useEffect(() => {
@@ -21,19 +21,23 @@ export default function Home() {
   };
 
   const handelClickNext = () => {
-    setInitialId(initialId + 8);
+    if (initialId <= 93) {
+      setInitialId(initialId + 8);
+    }
   };
 
   const handelClickPrev = () => {
-    setInitialId(initialId - 8);
+    if (initialId >= 16) {
+      setInitialId(initialId - 8);
+    }
   };
 
   return (
-    <>
+    <div className="principal">
       <div className="container">
         {posts &&
           posts.map((element: Post, index: number) => {
-            if (index > initialId && index < initialId + 9) {
+            if (index >= initialId && index < initialId + 8) {
               return <Card key={index} post={element} func={handleDelete} />;
             }
           })}
@@ -46,6 +50,6 @@ export default function Home() {
           Next
         </button>
       </div>
-    </>
+    </div>
   );
 }

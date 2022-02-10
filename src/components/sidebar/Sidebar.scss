@@ -3,9 +3,10 @@ $gray: #c4ccde;
 
 .sidebar{
     width: 14rem;
-    height: calc(100vh - 52px);
+    height: 100%;
     border-right: 1px solid ;
     background-color: #737373;
+    min-height:100vh ;
       ul{
         list-style: none;
         padding: 1rem 2rem;
