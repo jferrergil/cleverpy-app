@@ -75,3 +75,21 @@
 .container .card:nth-child(even) .circle {
   background: #e51978;
 }
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.buttons-direction{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #545454;
+  color: #fff;
+  border-radius: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  gap:5px;
+}

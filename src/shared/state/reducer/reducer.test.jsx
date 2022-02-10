@@ -1,16 +1,44 @@
-/* eslint-disable jest/valid-expect */
-import reducer from "./reducer";
-import actionTypes from "../actions/action-types.tsx";
+import reducers from "./reducer";
 
-describe("Given actiontypes reducer", () => {
-  test("When action.types = GET_POST, then sjould return array", () => {
-    const initialState = [];
-    const action = {
-      type: actionTypes.GET_POST,
-      post: [{ userId: 1, body: "body" }],
-    };
-    expect(
-      reducer(initialState, action).toEqual([{ userId: 1, body: "body" }])
-    );
+test("reducers", () => {
+  let state;
+  state = reducers(
+    { data: { posts: [], post: {}, loading: true } },
+    {
+      type: "GET_POSTS",
+      payload: [{ userId: 1, id: 1, title: "test", body: "test" }],
+    }
+  );
+
+  expect(state).toEqual({
+    data: {
+      posts: [{ userId: 1, id: 1, title: "test", body: "test" }],
+      post: {},
+      loading: false,
+    },
+  });
+});
+
+test("reducerstest", () => {
+  let state;
+  state = reducers(
+    {
+      data: {
+        posts: [{ userId: 1, id: 1, title: "test", body: "test" }],
+        post: {},
+        loading: false,
+      },
+    },
+    {
+      type: "DELETE_POST",
+      payload: { userId: 1, id: 2, title: "test", body: "test" },
+    }
+  );
+  expect(state).toEqual({
+    data: {
+      posts: [{ userId: 1, id: 1, title: "test", body: "test" }],
+      post: {},
+      loading: false,
+    },
   });
 });

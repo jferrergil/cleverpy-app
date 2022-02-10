@@ -15,7 +15,7 @@ export const loadPosts = () => {
         dispatch(getPosts(resp.data));
       })
       .catch((error) => {
-        return error;
+        dispatch({type: "LOAD_POST_ERROR", payload: error})
       });
   };
 };
