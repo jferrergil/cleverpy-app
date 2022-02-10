@@ -11,12 +11,8 @@ export const loadPosts = () => {
   return function (dispatch: Function) {
     axios
       .get(`${process.env.REACT_APP_API}`)
-      .then((resp) => {
-        dispatch(getPosts(resp.data));
-      })
-      .catch((error) => {
-        dispatch({type: "LOAD_POST_ERROR", payload: error})
-      });
+      .then((resp) => dispatch(getPosts(resp.data)))
+      .catch((error) => dispatch({ type: "LOAD_POST_ERROR", payload: error }));
   };
 };
 

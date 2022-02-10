@@ -30,8 +30,7 @@ describe("Given redux actions", () => {
         })
     })
     describe("When deletePost is called", () => {
-        test('deletePost', () => {
-            
+        test('deletePost', () => {           
 
             expect(deletePost({body: "", id: 0, title: "", userId: 0})).toEqual({
                    payload: {

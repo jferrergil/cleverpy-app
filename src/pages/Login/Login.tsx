@@ -1,21 +1,23 @@
-import React from "react";
 import "./Login.scss";
 
 export default function Login() {
+
+  const handeleForm = (event: FormEvent) => {
+    event.preventDefault()
+  }
+
   return (
     <div className="center">
       <h1>Login</h1>
-      <form>
+      <form onSubmit={(e) => handeleForm(e)}>
         <div className="txt_field">
           <input
             type="text"
-            
             className="form-control"
             name="user-email"
             id="user-email"
             required
           />
-
           <label htmlFor="user-email">Email</label>
         </div>
         <div className="txt_field">

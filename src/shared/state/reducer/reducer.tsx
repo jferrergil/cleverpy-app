@@ -1,6 +1,6 @@
-import { AnyAction } from 'redux';
-import { ActionPost } from '../../models/action-posts.model';
-import * as types from '../actions/action-types';
+import { AnyAction } from "redux";
+import { ActionPost } from "../../models/action-posts.model";
+import * as types from "../actions/action-types";
 
 const initialState: ActionPost = {
   posts: [],
