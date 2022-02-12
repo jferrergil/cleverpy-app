@@ -1,6 +1,6 @@
 # jorge-ferrer-gil-cleverpy-app
 
-###Stack
+### Stack
 
 Fronted: React/Redux/Jest
 
